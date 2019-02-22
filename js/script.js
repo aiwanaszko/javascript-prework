@@ -1,12 +1,20 @@
-var computerMove, playerMove;
+var computerMove, randomNumber;
 
 
-highlightBlock('Mhaz}dPies%2|2Jz#XEO');
-computerMove = 'kamień';
-highlightBlock('rw}O3R,Wh])%.ZZBm=28');
-printMessage(('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!'));
-
-highlightBlock('t=-?8}O3/^BA0Kk#z[V7');
-playerMove = 'papier';
-highlightBlock('`R}sEFtE=Cnxj[@j:0d)');
-printMessage(('Zagralem ' + playerMove + '! Jesli twoj ruch to nozyce, to wygrywasz!'));
+highlightBlock('@a9-_yRgQ#nIpT^8VE-O');
+randomNumber = Math.floor(Math.random() * 3 + 1);
+highlightBlock('YhI@AVc|,HARk6D+jK]p');
+console.log(('wylosowana liczba to: ' + randomNumber));
+highlightBlock('pp3@S^s3NIhR^gaqxp)M');
+if (randomNumber == '1') {
+  highlightBlock('mg|[eR(S`J!v!(NI)An@');
+  computerMove = 'kamień';
+} else if (randomNumber == '2') {
+  highlightBlock('JX?-xBexvaQ^!pe]pZ]a');
+  computerMove = 'papier';
+} else {
+  highlightBlock('X%q)1G|u}T}dgAE:?nlt');
+  computerMove = 'nozyce';
+}
+highlightBlock('s,:*4I!(;CZB-g(y[0S@');
+printMessage(('Mój ruch: ' + computerMove));
