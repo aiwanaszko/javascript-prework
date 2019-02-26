@@ -1,3 +1,18 @@
+
+
+
+var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
+
+buttonTest = document.getElementById(‘button-test’);
+buttonRock = document.getElementById(‘button-rock’);
+buttonPaper = document.getElementById(‘button-paper’);
+buttonScissors = document.getElementById(‘button-scissors’);
+
+function buttonClicked(argButtonName) {
+ clearMessages();
+ console.log(argButtonName + ' został kliknięty’);
+}
+
 var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
 /**
@@ -16,7 +31,7 @@ function getMoveName(argMoveId) {
     return 'papier';
   } else if (argMoveId == 3) {
     highlightBlock('-}8G^}76LKnr9ImUhjDO');
-    return 'nozyce';
+    return 'nożyce';
   } else {
     highlightBlock('xYZNH(j~1AWIt=}0:dA!');
     printMessage(('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".'));
@@ -36,10 +51,10 @@ function displayResult(argPlayerMove, argComputerMove) {
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     highlightBlock('wd0[_cer3(WD`ADS/}KH');
     printMessage('Wygrywasz!');
-  } else if (argPlayerMove == 'nozyce' && argComputerMove == 'papier') {
+  } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
     highlightBlock('/[RGu8D%EWz8pR7e0@j?');
     printMessage('Wygrywasz!');
-  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nozyce') {
+  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
     highlightBlock('k_Vh//pTI#koVd9IIcfU');
     printMessage('Wygrywasz!');
   } else if (argPlayerMove == argComputerMove) {
@@ -55,11 +70,10 @@ function displayResult(argPlayerMove, argComputerMove) {
 
 
 highlightBlock('@VOTX6VQ*o$yjM+_@R19');
-playerInput = window.prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+playerMove = buttonName;
 highlightBlock('s==g|p%vx)tAJTb(iC%J');
 console.log(('wybór ruchu gracza to: ' + playerInput));
 highlightBlock('`be:2/e4d?V`g:oc,h;m');
-playerMove = getMoveName(playerInput);
 highlightBlock('E_4c18.k3[98ns-NlMFf');
 console.log(('ruch gracza to: ' + playerMove));
 highlightBlock('QRwxlkF2REl^}L,PeYVf');
@@ -72,3 +86,10 @@ highlightBlock('!S,TbAE#@kVA[:fhDK%J');
 console.log(('ruch komputera to: ' + computerMove));
 highlightBlock('1azObqcq*/81copZ%f(x');
 displayResult(playerMove, computerMove);
+
+
+
+buttonTest.addEventListener(‘click’, function(){ buttonClicked(‘Guzik TEST’); });
+buttonRock.addEventListener(‘click’, function(){ buttonClicked(‘kamień’); });
+buttonPaper.addEventListener(‘click’, function(){ buttonClicked(‘papier’); });
+buttonScissors.addEventListener(‘click’, function(){ buttonClicked(‘nożyce’); });
