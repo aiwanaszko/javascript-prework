@@ -1,0 +1,49 @@
+body {
+  background: #74b9ff;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+button {
+  width: 200px;
+  height: 80px;
+  background: #00cec9;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  margin: 30px 0;
+}
+
+ul {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+p, ul {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  color: #00cec9;
+}
+
+.result {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+}

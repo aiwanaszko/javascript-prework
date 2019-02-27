@@ -3,17 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="box">
 	<div class="container">
 		<div id="buttons">
+			<h2>Zapraszamy do gry</h2>
+			<h1>Papier, kamień, nożyce</h1>
+			<p>Pojedyncza runda gry polega na jednoczesnym zagraniu dwóch graczy. Każdy gracz może wybrać jeden z ruchów: papier, kamień, lub nożyce. Wynik rundy może być następujący:</p>
+			<ul>
+				<li>remis – jeśli obaj gracze wybrali ten sam ruch,</li>
+				<li>wygrana gracza, który zagrał papier, jeśli drugi gracz zagrał kamień,</li>
+				<li>wygrana gracza, który zagrał kamień, jeśli drugi gracz zagrał nożyce,</li>
+				<li>wygrana gracza, który zagrał nożyce, jeśli drugi gracz zagrał papier.</li>
+			</ul>
 			<button id="button-rock">Kamień</button>
 			<button id="button-paper">Papier</button>
 			<button id="button-scissors">Nożyce</button>
 		</div>
-		<div id="messages"></div>
+		<div id="messages" class="result"></div>
 	</div>
+</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
