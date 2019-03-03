@@ -14,7 +14,7 @@ buttonScissors = document.getElementById('button-scissors');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-  var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput, playerWin, computerWin;
+  var argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
 /**
  * Describe this function...
@@ -52,17 +52,6 @@ function displayResult(argPlayerMove, argComputerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
 
-// Added code
-function countResult(playerWin, computerWin) {
-  console.log('wywolano funkcje countResult z argumentami:' + playerWin + ',' + computerWin);
-  if((argPlayerMove == 'papier' && argComputerMove == 'kamień') || (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') || (argPlayerMove == 'nożyce' && argComputerMove == 'papier')) {
-    playerWin == 1, computerWin == 0
-  } else if (argPlayerMove == argComputerMove) {
-    playerWin == 0, computerWin == 0
-  } else playerWin == 0, computerWin == 1
-  printMessage('Wynik to:' + playerWin + ':' + computerWin);
-}
-// end of added code
 
 playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
@@ -71,7 +60,7 @@ console.log('wylosowana liczba to: ' + randomNumber);
 computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
-countResult(playerWin, computerWin);
+
 
 
 }
