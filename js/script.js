@@ -14,8 +14,7 @@ buttonScissors = document.getElementById('button-scissors');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-  var randomNumber, playerInput;
-
+  
 /**
  * Describe this function...
  */
